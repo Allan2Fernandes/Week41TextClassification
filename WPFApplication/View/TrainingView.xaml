@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="WPFApplication.View.TrainingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPFApplication.View"
+             Background="AliceBlue"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="400">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Content="Train" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Command="{Binding TrainCommand}" Click="Button_Click"/>
+        <Button Content="Make Predictions" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Command="{Binding ChangePageCMD}"/>
+        <Label x:Name="TrainingTimeLabel" Content="Training Duration: " HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label x:Name="TrainingDimensionsLabel" Content="Number of Dimensions:" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label x:Name="DSALabel" Content="Size of DatasetA: " HorizontalAlignment="Center" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label x:Name="DSBLabel" Content="Size of DatasetB: " HorizontalAlignment="Center" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label x:Name="AccuracyLabel" Content="Model Accuracy:" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center"/>
+
+    </Grid>
+</UserControl>
